@@ -1,0 +1,46 @@
+/* ============================================================
+   CRÈCHE MINOU — background.css
+   Floating decorative SVGs (page background, intro, finale)
+   ============================================================ */
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-14px) rotate(4deg);}}
+@keyframes drift{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+@keyframes twinkle-drift{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-14px) scale(1.12);}}
+
+/* ---- layered page background (far → mid) ---- */
+.bg-scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.bg-float{position:absolute;animation:drift 24s ease-in-out infinite;}
+.bg-float.far{opacity:.13;color:var(--sky);}
+.bg-float.mid{opacity:.24;}
+.b1{width:clamp(220px,40vw,440px);top:2%;inset-inline-start:-8%;}
+.b2{width:clamp(200px,34vw,380px);top:48%;inset-inline-end:-10%;color:var(--mint);animation-duration:30s;}
+.b3{width:clamp(220px,38vw,420px);bottom:-4%;inset-inline-start:22%;animation-duration:28s;}
+.b4{width:clamp(70px,11vw,130px);top:14%;inset-inline-end:8%;color:var(--sun);animation-name:twinkle-drift;animation-duration:10s;}
+.b5{width:clamp(60px,9vw,110px);top:70%;inset-inline-start:6%;color:var(--coral);animation-name:twinkle-drift;animation-duration:12s;}
+.b6{width:clamp(64px,10vw,120px);top:22%;inset-inline-start:4%;color:var(--coral);animation-duration:17s;}
+.b7{width:clamp(56px,9vw,104px);top:58%;inset-inline-end:5%;color:var(--sky);animation-duration:19s;}
+.b8{width:clamp(56px,8vw,96px);top:80%;inset-inline-end:16%;color:var(--sun);transform:rotate(-10deg);}
+.b9{width:clamp(52px,7vw,88px);top:36%;inset-inline-end:3%;color:var(--mint);transform:rotate(9deg);animation-duration:21s;}
+.b10{width:clamp(56px,8vw,96px);top:44%;inset-inline-start:3%;color:var(--lav);animation-duration:23s;}
+.b11{width:clamp(44px,6vw,70px);top:6%;inset-inline-start:42%;color:var(--sun);animation-name:twinkle-drift;animation-duration:9s;}
+.b12{width:clamp(52px,7vw,84px);top:88%;inset-inline-start:2%;color:var(--coral);animation-duration:26s;}
+
+/* ---- intro floaters ---- */
+.intro-floaters{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.floater{position:absolute;opacity:.85;animation:bob 7s ease-in-out infinite;}
+.floater.p1{width:clamp(44px,7vw,70px);color:var(--sun);top:12%;inset-inline-start:8%;}
+.floater.p2{width:clamp(56px,9vw,96px);color:var(--coral);top:68%;inset-inline-start:6%;animation-duration:8.5s;}
+.floater.p3{width:clamp(56px,8vw,88px);color:var(--sky);top:16%;inset-inline-end:8%;animation-duration:6.5s;}
+.floater.p4{width:clamp(180px,30vw,320px);color:var(--sky);top:6%;inset-inline-end:-3%;opacity:.4;animation-duration:12s;}
+.floater.p5{width:clamp(52px,7vw,80px);color:var(--mint);bottom:10%;inset-inline-end:9%;animation-duration:9s;}
+.floater.p6{width:clamp(48px,7vw,76px);color:var(--lav);bottom:20%;inset-inline-start:14%;animation-duration:7.5s;}
+.floater.p7{width:clamp(160px,26vw,280px);color:var(--mint);bottom:2%;inset-inline-start:-4%;opacity:.35;animation-duration:15s;}
+@media (max-width:520px){.floater.p4,.floater.p7{opacity:.28;}}
+@media (max-width:420px){.floater.p4{display:none;}}
+
+/* ---- finale floaters ---- */
+.finale-floaters{position:absolute;inset:0;pointer-events:none;}
+.ff{position:absolute;opacity:.35;animation:bob 8s ease-in-out infinite;}
+.ff.f1{width:34px;color:var(--sun);top:10%;left:10%;}
+.ff.f2{width:120px;color:var(--sky);bottom:8%;right:-2%;animation-duration:14s;}
+.ff.f3{width:30px;color:var(--coral);bottom:14%;left:8%;animation-duration:9s;}
+.ff.f4{width:26px;color:var(--mint);top:16%;right:14%;animation-duration:7s;}
